@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './css/index.css';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from './reducers/index';
+import { BrowserRouter } from 'react-router-dom'
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
+
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark'
+  }
+})
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <MuiThemeProvider theme={theme}>
+    <BrowserRouter>
+      <Provider store={ store }>
+        <App />
+      </Provider>
+    </BrowserRouter>
+  </MuiThemeProvider>,
   document.getElementById('root')
 );
 
