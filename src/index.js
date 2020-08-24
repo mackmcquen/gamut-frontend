@@ -7,13 +7,16 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from './reducers/index';
 import { BrowserRouter } from 'react-router-dom'
-import { createMuiTheme, MuiThemeProvider } from '@material-ui/core';
+import { createMuiTheme, MuiThemeProvider, colors } from '@material-ui/core';
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 const theme = createMuiTheme({
   palette: {
     type: 'dark'
+  },
+  colors: {
+    secondary: 'red'
   }
 })
 

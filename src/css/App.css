@@ -7,6 +7,13 @@ html {
   font-family: 'Roboto';
 }
 
+#particles-js canvas{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .App-header {
   background-color: #3f3f3f;
   display: flex;
@@ -65,12 +72,17 @@ html {
 }
 
 .Search-div {
-  margin-top: 360px;
+  margin-top: 250px;
   margin-bottom: 66px
+}
+
+.Greeting-title {
+  color: white;
 }
 
 .Search-title {
   color: white;
+  animation: color-change 22s infinite;
 }
 
 .Search-bar {
@@ -91,6 +103,14 @@ html {
 .Artwork-card:hover {
   transform: scale(1.18);
   transition: all .6s ease-in-out;
+}
+
+.Account-card {
+  margin-top: 320px;
+}
+
+.Account-details {
+  color: white;
 }
 
 @keyframes fadein {
@@ -120,4 +140,15 @@ html {
 @-o-keyframes fadein {
   from { opacity: 0; }
   to   { opacity: 1; }
+}
+
+@keyframes color-change {
+  0% { color: white }
+  30% { color: magenta }
+  40% { color: red }
+  50% { color: yellow }
+  60% { color: rgb(0, 255, 0) }
+  70% { color: cyan }
+  80% { color: blue }
+  90% { color: rgb(136, 0, 255) }
 }

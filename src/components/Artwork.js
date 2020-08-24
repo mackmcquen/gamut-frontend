@@ -60,7 +60,9 @@ class Artwork extends Component {
         return(
             <div>
                 <Typography className='Artwork-info' variant='h4'>{this.props.art.title}</Typography>
-                <img src={`${this.props.art.image}`} alt='Artwork' style={divStyle} />
+                <a href={`${this.props.art.image}`} target="_blank">
+                    <img src={`${this.props.art.image}`} alt='Artwork' style={divStyle} />
+                </a>
                 <div className='Artwork-info'>
                     <Typography className='Artwork-info' variant='h5'>{this.props.art.artistName}</Typography>
                     <Typography className='Artwork-info' variant='h6'>{this.props.art.completitionYear}</Typography>

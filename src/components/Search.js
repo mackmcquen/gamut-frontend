@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { currentUser } from '../actions/auth'
+import { connect } from 'react-redux';
+import { currentUser } from '../actions/auth';
 import ArtworkContainer from '../containers/ArtworkContainer';
 import TextField from '@material-ui/core/TextField';
 import BrushIcon from '@material-ui/icons/Brush';
@@ -33,6 +33,9 @@ class Search extends Component {
           } else {
             // Update the Redux store with User
             this.props.currentUser(user)
+            this.setState({
+              user: user
+            })
           }
         })
     }
@@ -44,7 +47,8 @@ class Search extends Component {
           pageNumber: 1,
           searchTerm: '',
           artworks: [],
-          totalResults: 0
+          totalResults: 0,
+          user: []
         }
     }
     
@@ -79,6 +83,7 @@ class Search extends Component {
         return(
             <div>
                 <div className='Search-div'>
+                      <Typography className='Greeting-title' variant='h4'>Hello, {this.state.user.username}.</Typography>
                     <Box m={3}>
                       <Typography className='Search-title' variant='h3'>What are you looking for?</Typography>
                     </Box>

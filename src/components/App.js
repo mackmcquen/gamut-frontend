@@ -4,8 +4,9 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Signup from './Signup';
 import Login from './Login';
 import Search from './Search';
-import Navbar from '../components/Navbar';
-import Collection from '../components/Collection'
+import Navbar from './Navbar';
+import Collection from './Collection';
+import Account from './Account'
 
 class App extends Component {
 
@@ -21,7 +22,7 @@ class App extends Component {
             <Route path={ '/login' } component={ Login } />
             <Route path={ '/search' } component={ Search } />
             <Route path={ '/collection' } component={ Collection } />
-            {/* <Route path={ '/user' } component={ User } /> */}
+            <Route path={ '/account' } component={ Account } />
           </Switch>
         </BrowserRouter>
       </div>
