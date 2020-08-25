@@ -7,11 +7,13 @@ html {
   font-family: 'Roboto';
 }
 
-#particles-js canvas{
-  position: absolute;
+#particles-js {
   width: 100%;
   height: 100%;
-  z-index: -1;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0
 }
 
 .App-header {
@@ -25,11 +27,16 @@ html {
 }
 
 .Gamut-logo {
-  height: 250px;
+  height: 450px;
+  margin-top: 36px;
 }
 
 .Signup-form {
-  margin-top: 300px;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+   -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+       animation: fadein 1s;
 }
 
 .Signup-title {
@@ -73,7 +80,12 @@ html {
 
 .Search-div {
   margin-top: 250px;
-  margin-bottom: 66px
+  margin-bottom: 66px;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+   -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+       animation: fadein 1s;
 }
 
 .Greeting-title {
@@ -93,11 +105,11 @@ html {
 }
 
 .Artwork-card {
-  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 2s; /* Firefox < 16 */
-   -ms-animation: fadein 2s; /* Internet Explorer */
-    -o-animation: fadein 2s; /* Opera < 12.1 */
-       animation: fadein 2s;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+   -ms-animation: fadein 1s; /* Internet Explorer */
+    -o-animation: fadein 1s; /* Opera < 12.1 */
+       animation: fadein 1s;
 }
 
 .Artwork-card:hover {

@@ -55,6 +55,7 @@ class Signup extends React.Component {
     render() {
         return (
             <div className='Signup-form'>
+                <img src='../gamut.png' alt='Gamut' className='Gamut-logo' />
                 <Box m={3}>
                 <Typography className='Signup-title' variant='h4'>Welcome aboard.</Typography>
                 </Box>

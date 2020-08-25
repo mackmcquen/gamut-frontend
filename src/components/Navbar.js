@@ -5,7 +5,7 @@ class Navbar extends Component {
     
     render() {
         return(
-            <AppBar position='static' style={{background: 'black'}}>
+            <AppBar position='static' style={{background: 'transparent'}}>
                 <Toolbar>
                     <Button href='/search' style={{ flexGrow: 1 }}>
                         <Typography variant='h6'>
