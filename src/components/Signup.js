@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography'
 
-const usersAPI = `http://localhost:3001/users`
+const usersAPI = `https://gamutart.herokuapp.com/users`
 
 class Signup extends React.Component {
     constructor() {
@@ -77,7 +77,7 @@ class Signup extends React.Component {
                     </Box>
                 </form>
                 <Box m={2}>
-                    <Link to={`/login`} className='Login-link' type='button'>Have an account? Login</Link>
+                    <Link to={`/`} className='Login-link' type='button'>Have an account? Login</Link>
                 </Box>
             </div>
         )

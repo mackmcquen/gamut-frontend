@@ -24,12 +24,12 @@ class Search extends Component {
         }
       }
       console.log(reqObj)
-      fetch('http://localhost:3001/current_user', reqObj)
+      fetch('https://gamutart.herokuapp.com/current_user', reqObj)
         .then(resp => resp.json())
         .then(user => {
           console.log(user)
           if (user.error) {
-            this.props.history.push('/login')
+            this.props.history.push('/')
           } else {
             // Update the Redux store with User
             this.props.currentUser(user)

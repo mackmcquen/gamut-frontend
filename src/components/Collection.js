@@ -8,8 +8,8 @@ import Tooltip from '@material-ui/core/Tooltip';
 import SearchIcon from '@material-ui/icons/Search'
 
 
-const usersURL = 'http://localhost:3001/users'
-const userArtworksURL = 'http://localhost:3001/artworks'
+const usersURL = 'https://gamutart.herokuapp.com/users'
+const userArtworksURL = 'https://gamutart.herokuapp.com/artworks'
 
 class Collection extends Component {
 
@@ -17,7 +17,7 @@ class Collection extends Component {
         const token = localStorage.getItem('token')
         console.log(token)
         if (!token) {
-            this.props.history.push('/login')
+            this.props.history.push('/')
         } else {
             const reqObj = {
                 method: 'GET',
@@ -26,12 +26,12 @@ class Collection extends Component {
                 }
             }
             console.log(reqObj)
-            fetch('http://localhost:3001/current_user', reqObj)
+            fetch('https://gamutart.herokuapp.com/current_user', reqObj)
             .then(resp => resp.json())
             .then(user => {
                 console.log(user)
                 if (user.error) {
-                    this.props.history.push('/login')
+                    this.props.history.push('/')
                 } else {
                     // Update the Redux store with User
                     this.props.currentUser(user)

@@ -7,7 +7,7 @@ import Button from '@material-ui/core/Button';
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography';
 
-const authAPI = `http://localhost:3001/auth`
+const authAPI = `https://gamutart.herokuapp.com/auth`
 
 class Login extends React.Component {
     constructor() {

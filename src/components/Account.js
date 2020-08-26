@@ -9,7 +9,7 @@ class Account extends Component {
         const token = localStorage.getItem('token')
         console.log(token)
         if (!token) {
-          this.props.history.push('/login')
+          this.props.history.push('/')
         } else {
           const reqObj = {
             method: 'GET',
@@ -18,7 +18,7 @@ class Account extends Component {
             }
           }
           console.log(reqObj)
-          fetch('http://localhost:3001/current_user', reqObj)
+          fetch('https://gamutart.herokuapp.com/current_user', reqObj)
             .then(resp => resp.json())
             .then(user => {
               console.log(user)

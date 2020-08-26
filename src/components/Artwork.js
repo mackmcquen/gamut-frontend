@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography'
 
-const backendArtworksAPI = 'http://localhost:3001/artworks'
-const artworkCollectionsAPI = 'http://localhost:3001/artwork_collections'
+const backendArtworksAPI = 'https://gamutart.herokuapp.com/artworks'
+const artworkCollectionsAPI = 'https://gamutart.herokuapp.com/artwork_collections'
 
 class Artwork extends Component {
 
