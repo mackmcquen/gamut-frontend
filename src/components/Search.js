@@ -15,7 +15,7 @@ class Search extends Component {
     const token = localStorage.getItem('token')
     console.log(token)
     if (!token) {
-      this.props.history.push('/login')
+      this.props.history.push('/')
     } else {
       const reqObj = {
         method: 'GET',
