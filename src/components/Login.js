@@ -46,7 +46,7 @@ class Login extends React.Component {
                     localStorage.setItem('token', user.token)
                     this.props.loginSuccess(user)
                     // Redirect to /search path
-                    this.props.history.push(`/search`)
+                    this.props.history.push(`/signup`)
                 }
             })
     }
