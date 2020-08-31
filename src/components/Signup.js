@@ -45,7 +45,7 @@ class Signup extends React.Component {
                 if (this.state.email && this.state.username && this.state.password !== '') {
                     console.log(user)
                     // Redirect to /search path
-                    this.props.history.push(`/search`)
+                    this.props.history.push(`/`)
                 } else {
                     alert('Please fill all fields')
                 }
