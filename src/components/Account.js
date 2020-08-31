@@ -23,7 +23,7 @@ class Account extends Component {
             .then(user => {
               console.log(user)
               if (user.error) {
-                this.props.history.push('/login')
+                this.props.history.push('/')
               } else {
                 // Update the Redux store with User
                 this.props.currentUser(user)
@@ -59,7 +59,7 @@ class Account extends Component {
                     </Typography>
                 </div>
                     <Box m={3}>
-                        <Button className='Logout-button' type='submit' onClick={this.handleLogout} href='/login' variant='contained' color='primary'>Logout</Button>
+                        <Button className='Logout-button' type='submit' onClick={this.handleLogout} href='/' variant='contained' color='primary'>Logout</Button>
                     </Box>
             </div>
         )
